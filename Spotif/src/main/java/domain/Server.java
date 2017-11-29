@@ -1,3 +1,4 @@
+package domain;
 public class Server {
 
 	public void addSong() {

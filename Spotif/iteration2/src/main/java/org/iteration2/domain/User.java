@@ -1,3 +1,3 @@
 package org.iteration2.domain;
-public class Product {
+public class User {
 }

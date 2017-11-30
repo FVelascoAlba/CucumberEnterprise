@@ -4,12 +4,12 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>iteration1_0</groupId>
-    <artifactId>Spotif</artifactId>
-    <version>1.1.0</version>
+    <artifactId>iteration1_0</artifactId>
+    <version>1.1.1</version>
   </parent>
-  <groupId>iteration1_0</groupId>
-  <artifactId>iteration1_0</artifactId>
-  <version>1.2.0</version>
+  <groupId>iteration2</groupId>
+  <artifactId>iteration2</artifactId>
+  <version>1.2.1</version>
   <name>iteration2</name>
   <url>http://maven.apache.org</url>
   <properties>
@@ -21,6 +21,11 @@
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.6</version>
     </dependency>
   </dependencies>
   <packaging>pom</packaging>

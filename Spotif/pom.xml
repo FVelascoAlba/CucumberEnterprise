@@ -25,5 +25,6 @@
 	 <artifactId>Spotif</artifactId>
   <modules>
     <module>iteration1_0</module>
+    <module>iteration2</module>
   </modules>
 </project>

@@ -5,11 +5,11 @@
   <parent>
     <groupId>iteration2</groupId>
     <artifactId>iteration2</artifactId>
-    <version>1.2.1.</version>
+    <version>1.2.1</version>
   </parent>
   <groupId>iteration3</groupId>
   <artifactId>iteration3</artifactId>
-  <version>1.3.0</version>
+  <version>1.3.1</version>
   <name>iteration3</name>
   <url>http://maven.apache.org</url>
   <properties>

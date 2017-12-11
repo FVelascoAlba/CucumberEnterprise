@@ -4,14 +4,14 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>iteration4</groupId>
-		<artifactId>iteration4</artifactId>
-		<version>1.4.1</version>
+		<groupId>iteration5</groupId>
+		<artifactId>iteration5</artifactId>
+		<version>1.5.1</version>
 	</parent>
-	<groupId>iteration5</groupId>
-	<artifactId>iteration5</artifactId>
-	<version>1.5.1</version>
-	<name>iteration5</name>
+	<groupId>iteration6</groupId>
+	<artifactId>iteration6</artifactId>
+	<version>1.6.0</version>
+	<name>iteration6</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

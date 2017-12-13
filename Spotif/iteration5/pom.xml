@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>iteration5</groupId>
 	<artifactId>iteration5</artifactId>
-	<version>1.5.1</version>
+	<version>1.5.2</version>
 	<name>iteration5</name>
 	<url>http://maven.apache.org</url>
 	<properties>
@@ -29,4 +29,5 @@
 			<version>5.1.6</version>
 		</dependency>
 	</dependencies>
+	<packaging>pom</packaging>
 </project>

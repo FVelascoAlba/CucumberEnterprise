@@ -1,36 +1,40 @@
-public class EMAIL {
+package Domain;
 
-	private String source;
-	private String destination;
-	private String content;
+public class Email {
+	private String source, destination, content;
 
-	public string getSource() {
-		// TODO - implement EMAIL.getSource
-		throw new UnsupportedOperationException();
+	public Email(String source, String destination, String content) {
+		super();
+		this.source = source;
+		this.destination = destination;
+		this.content = content;
+	}
+	
+	
+
+	public String getSource() {
+		return source;
+	}
+
+	public void setSource(String source) {
+		this.source = source;
 	}
 
 	public String getDestination() {
-		return this.destination;
+		return destination;
 	}
 
-	/**
-	 * 
-	 * @param dest
-	 */
-	public void setDestination(String dest) {
-		this.destination = dest;
+	public void setDestination(String destination) {
+		this.destination = destination;
 	}
 
 	public String getContent() {
-		return this.content;
+		return content;
 	}
 
-	/**
-	 * 
-	 * @param cont
-	 */
-	public void setContent(String cont) {
-		this.content = cont;
+	public void setContent(String content) {
+		this.content = content;
 	}
-
+	
+	
 }

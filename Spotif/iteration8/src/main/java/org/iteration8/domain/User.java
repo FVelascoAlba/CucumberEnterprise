@@ -7,6 +7,8 @@ public class User {
 	private ArrayList<Song> songs_bought;
 	private ArrayList<Album> albums_bought;
 	
+	public User() {}
+	
 	public User(String name, String surname, String userName, String password, ArrayList<Song> songs_bought,
 			ArrayList<Album> albums_bought, ArrayList<ArrayList<Song>> list_songs) {
 		super();

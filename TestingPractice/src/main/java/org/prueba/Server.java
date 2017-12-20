@@ -11,7 +11,9 @@ public class Server {
 	public Server() {
 		Song s = new Song("ArtPop", "Lady Gaga", 3);
 		ArrayList<Song> songs = new ArrayList<Song>();
-		Album e = new Album("ArtPop", "6/11/2013", "Lady Gaga", 15, songs);
+		songs.add(s);
+		Album e = new Album("ArtPop", "6/11/2013", "Lady Gaga", 15);
+		e.setSongs(songs);
 		albums.add(e);
 	}
 

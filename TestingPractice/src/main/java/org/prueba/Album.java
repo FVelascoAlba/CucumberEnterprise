@@ -7,13 +7,12 @@ public class Album {
 	private int price;
 	private ArrayList<Song> songs;
 	
-	public Album(String name, String released_date, String artist, int price, ArrayList<Song> songs) {
+	public Album(String name, String released_date, String artist, int price) {
 		super();
 		this.name = name;
 		this.released_date = released_date;
 		this.artist = artist;
 		this.price = price;
-		this.songs = songs;
 	}
 	
 	

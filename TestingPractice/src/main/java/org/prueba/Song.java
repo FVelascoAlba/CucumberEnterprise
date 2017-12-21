@@ -32,4 +32,11 @@ public class Song {
 		this.price = price;
 	}
 	
+	public boolean equals (Song s) {
+		if(s.getName().equals(this.name) && s.getArtist().equals(this.artist) && s.getPrice() == this.price) {
+			return true;
+		}
+		return false;
+	}
+	
 }

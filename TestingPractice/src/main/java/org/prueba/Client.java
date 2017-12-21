@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Client {
 
-	private ArrayList<User> users;
-	private ArrayList<Album> albumList;
+	private ArrayList<User> users = new ArrayList<User>();
+	private ArrayList<Album> albumList = new ArrayList<Album>();
 
 	public Client() {
 		Album al = new Album("ArtPop", "6/11/2013", "Lady Gaga", 15);

@@ -3,8 +3,9 @@ import java.util.ArrayList;
 
 public class User {
 	private String name, surname, userName, password;
-	private ArrayList<Song> songs_bought;
-	private ArrayList<Album> albums_bought;
+	private ArrayList<Song> songs_bought = new ArrayList<Song>();
+	private ArrayList<Album> albums_bought = new ArrayList<Album>();
+	private int money;
 	
 	public User() {}
 	
@@ -14,7 +15,13 @@ public class User {
 		this.password = password;
 	}
 	
+	public void setMoney(int m) {
+		this.money = m;
+	}
 	
+	public int getMoney() {
+		return this.money;
+	}
 	
 	public String getName() {
 		return name;

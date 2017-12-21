@@ -59,10 +59,10 @@ public class TestCreateUser
     
     
     public void testAlphanumeric4() {
-    	User us = new User ("FernandoV10", "asdf_10");
     	
-    	assertTrue(!Client.isEmpty(us.getUserName()));
-    	assertTrue(Client.isAlphanumeric(us.getUserName()));
+    	Client c = new Client();
+    	
+    	assertFalse(c.createUser("FernandoV10", "asdf_10"));
     	
     }
 }

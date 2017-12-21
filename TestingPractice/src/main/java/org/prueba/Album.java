@@ -51,4 +51,8 @@ public class Album {
 	public void setSongs(ArrayList<Song> songs) {
 		this.songs = songs;
 	}
+	
+	public int getNSongs() {
+		return getSongs().size();
+	}
 }

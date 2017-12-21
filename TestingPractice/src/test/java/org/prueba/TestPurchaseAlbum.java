@@ -25,9 +25,10 @@ public class TestPurchaseAlbum extends TestCase {
 
 	/**
 	 * Rigourous Test :-)
+	 * @throws Exception 
 	 */
 
-	public void test1() {
+	public void test1() throws Exception {
 
 		Server s = new Server();
 		Album al = new Album("War", "28/2/1983", "U2", 17);
@@ -38,7 +39,7 @@ public class TestPurchaseAlbum extends TestCase {
 
 	}
 
-	public void test2() {
+	public void test2() throws Exception {
 
 		Server s = new Server();
 		Album al = new Album("Space Oddity", "4/11/1969", "David Bowie", 15);
@@ -48,7 +49,7 @@ public class TestPurchaseAlbum extends TestCase {
 
 	}
 	
-	public void test3() {
+	public void test3() throws Exception {
 		
 		Server s = new Server();
 		
@@ -59,7 +60,7 @@ public class TestPurchaseAlbum extends TestCase {
 		assertFalse(s.purchaseAlbum(al, us));
 	}
 	
-	public void test4() {
+	public void test4() throws Exception {
 		
 		Server s = new Server();
 		

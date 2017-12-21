@@ -2,30 +2,30 @@ package org.prueba;
 
 
 public class Email {
-	private String source, destination, content;
+	private String content;
+	private Administrator source;
+	private Regular destination;
 
-	public Email(String source, String destination, String content) {
+	public Email(String content) {
 		super();
-		this.source = source;
-		this.destination = destination;
 		this.content = content;
 	}
 	
 	
 
-	public String getSource() {
+	public Administrator getSource() {
 		return source;
 	}
 
-	public void setSource(String source) {
+	public void setSource(Administrator source) {
 		this.source = source;
 	}
 
-	public String getDestination() {
+	public Regular getDestination() {
 		return destination;
 	}
 
-	public void setDestination(String destination) {
+	public void setDestination(Regular	 destination) {
 		this.destination = destination;
 	}
 

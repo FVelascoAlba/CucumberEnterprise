@@ -4,18 +4,18 @@ import java.util.ArrayList;
 
 public class Client {
 
-	private ArrayList<User> users = new ArrayList<User>();
-	private ArrayList<Album> albumList = new ArrayList<Album>();
-
 	public Client() {
-		Album al = new Album("ArtPop", "6/11/2013", "Lady Gaga", 15);
-		Album al1 = new Album("Háblame bajito", "14/12/2017", "Abraham Mateo", 2);
-
-		albumList.add(al);
-		albumList.add(al1);
 
 	}
 
+	/***
+	 * 
+	 * @param userName
+	 *            Name of the user to be created
+	 * @param password
+	 *            Password of the new user
+	 * @return A boolean value indicating if the user have been created properly
+	 */
 	public boolean createUser(String userName, String password) {
 
 		User new_user = null;
@@ -31,6 +31,9 @@ public class Client {
 		return response;
 	}
 
+	/**
+	 * 
+	 */
 	public void buySong() {
 	}
 
@@ -40,12 +43,15 @@ public class Client {
 	public void playbackSong() {
 	}
 
-	public boolean playbackAlbum(Album al, User us) {
+	public static boolean playbackAlbum(Album al, User us) throws Exception {
 
-		if (!al.equals(null)) {
-			if (!us.equals(null)) {
+		ArrayList<User> users = BrokerDB.getAgente().getUsers();
+		ArrayList<Album> albumList = BrokerDB.getAgente().getAlbums();
+
+		if (al != null) {
+			if (us != null) {
 				for (int i = 0; i < users.size(); i++) {
-					if (us.equals(users.get(i))) {
+					if (existUser(us)) {
 						for (int j = 0; j < albumList.size(); j++) {
 							if (al.equals(albumList.get(i))) {
 								if (al.getNSongs() > 0) {
@@ -59,12 +65,44 @@ public class Client {
 
 		}
 		return false;
+
+	}
+
+	public static boolean existUser(User us) throws Exception {
+		ArrayList<User> users = BrokerDB.getAgente().getUsers();
+
+		for (int i = 0; i < users.size(); i++) {
+			if (us.equals(users.get(i))) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public void deleteListSongs(ArrayList<Song> list) {
 	}
 
-	public void modifyListSongs(ArrayList<Song> list) {
+	public static boolean addSongToList(Song s, User us, int id) throws Exception {
+
+		ArrayList<User> users = BrokerDB.getAgente().getUsers();
+		ArrayList<Song> songs = BrokerDB.getAgente().getSongs();
+
+		if (s != null) {
+			if (us != null) {
+				for (int i = 0; i < users.size(); i++) {
+					for (int j = 0; j < songs.size(); j++) {
+						if (s.equals(songs.get(j))) {
+							if (us.equals(users.get(i))) {
+								if (us.checkID(id)) {
+									return true;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		return false;
 	}
 
 	public void modifyUser(User us) {

@@ -2,22 +2,17 @@ package org.prueba;
 
 import java.util.ArrayList;
 
-public class Album {
+public class Album extends Product {
 	private String name, released_date, artist;
-	private int price;
 	private ArrayList<Song> songs = new ArrayList<Song>();
 
 	public Album(String name, String released_date, String artist, int price) {
-		super();
+		super(price);
 		this.name = name;
 		this.released_date = released_date;
 		this.artist = artist;
-		this.price = price;
 	}
 
-	public Album() {
-		// TODO Auto-generated constructor stub
-	}
 
 	public String getName() {
 		return name;
@@ -41,14 +36,6 @@ public class Album {
 
 	public void setArtist(String artist) {
 		this.artist = artist;
-	}
-
-	public int getPrice() {
-		return price;
-	}
-
-	public void setPrice(int price) {
-		this.price = price;
 	}
 
 	public ArrayList<Song> getSongs() {

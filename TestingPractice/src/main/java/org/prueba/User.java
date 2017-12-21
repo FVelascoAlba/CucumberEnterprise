@@ -2,10 +2,13 @@ package org.prueba;
 import java.util.ArrayList;
 
 public class User {
-	private String name, surname, userName, password;
+	private String name, surname;
+	protected String userName;
+	protected String password;
 	private ArrayList<Song> songs_bought = new ArrayList<Song>();
 	private ArrayList<Album> albums_bought = new ArrayList<Album>();
 	private int money;
+	private ArrayList<ArrayList<Song>> list_songs;
 	
 	public User() {}
 	
@@ -65,5 +68,25 @@ public class User {
 	public void setList_songs(ArrayList<ArrayList<Song>> list_songs) {
 		this.list_songs = list_songs;
 	}
-	ArrayList<ArrayList<Song>> list_songs;
+	
+	public boolean equals (User us) {
+		if(us.getUserName().equals(this.userName) && us.getPassword().equals(this.password)) {
+			return true;
+		}
+		return false;
+	}
+	
+	
+	public boolean checkID (int id) throws Exception {
+		ArrayList<ListSongs> ls = BrokerDB.getAgente().getListSongs();
+		
+		for (int i=0; i<ls.size(); i++) {
+			if (ls.get(i).getId() == id) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+
 }

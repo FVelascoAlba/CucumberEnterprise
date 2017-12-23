@@ -1,11 +1,20 @@
 package org.prueba;
 
-import org.prueba.User;
-
+/**
+ *
+ * @author nou model
+ *
+ */
 public class PurchaseInterface {
 
-	public static int getMoneyEarned(User u) {
+	/**
+	 *
+	 * @param u user
+	 * @return amount of money
+	 */
+	public static int getMoneyEarned(final User u) {
 		// TODO Auto-generated method stub
-		return 300;
+		int i = 300;
+		return i;
 	}
 }

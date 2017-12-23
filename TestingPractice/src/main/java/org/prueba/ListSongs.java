@@ -1,28 +1,59 @@
 package org.prueba;
 
-
+/**
+ *
+ * @author nou model
+ *
+ */
 public class ListSongs {
-	
+	/**
+	 *
+	 */
 	private String name;
+	/**
+	 *
+	 */
 	private int id;
-	
-	
-	public ListSongs(int id) {
+
+	/**
+	 *
+	 * @param idL id of the list of songs
+	 */
+	public ListSongs(final int idL) {
 		super();
-		this.id = id;
+		this.id = idL;
 	}
-	
-	public String getName() {
+
+	/**
+	 *
+	 * @return name
+	 */
+	public final String getName() {
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
+
+	/**
+	 *
+	 * @param nameL name of the list of songs
+	 */
+	public final void setName(final String nameL) {
+		this.name = nameL;
 	}
-	public int getId() {
+
+	/**
+	 *
+	 * @return id
+	 */
+	public final int getId() {
 		return id;
 	}
-	public void setId(int id) {
-		this.id = id;
+
+	/**
+	 *
+	 * @param idL id of the list of songs
+	 */
+	public final void setId(final int idL) {
+		this.id = idL;
 	}
-	
+
 }

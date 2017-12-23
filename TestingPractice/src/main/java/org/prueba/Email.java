@@ -1,41 +1,83 @@
 package org.prueba;
 
-
+/**
+ *
+ * @author nou model
+ *
+ */
 public class Email {
+	/**
+	 *
+	 */
 	private String content;
+	/**
+	 *
+	 */
 	private Administrator source;
+	/**
+	 *
+	 */
 	private Regular destination;
 
-	public Email(String content) {
-		super();
-		this.content = content;
-	}
-	
-	
 
-	public Administrator getSource() {
+	/**
+	 *
+	 * @param contentE text of the email
+	 */
+	public Email(final String contentE) {
+		super();
+		this.content = contentE;
+	}
+
+
+
+	/**
+	 *
+	 * @return source
+	 */
+	public final Administrator getSource() {
 		return source;
 	}
 
-	public void setSource(Administrator source) {
-		this.source = source;
+	/**
+	 *
+	 * @param sourceE source of the email
+	 */
+	public final void setSource(final Administrator sourceE) {
+		this.source = sourceE;
 	}
 
-	public Regular getDestination() {
+	/**
+	 *
+	 * @return destination
+	 */
+	public final Regular getDestination() {
 		return destination;
 	}
 
-	public void setDestination(Regular	 destination) {
-		this.destination = destination;
+	/**
+	 *
+	 * @param destinationE destination of the email
+	 */
+	public final void setDestination(final Regular destinationE) {
+		this.destination = destinationE;
 	}
 
-	public String getContent() {
+	/**
+	 *
+	 * @return content
+	 */
+	public final String getContent() {
 		return content;
 	}
 
-	public void setContent(String content) {
-		this.content = content;
+	/**
+	 *
+	 * @param contentE content of the email
+	 */
+	public final void setContent(final String contentE) {
+		this.content = contentE;
 	}
-	
-	
+
+
 }

@@ -1,32 +1,70 @@
 package org.prueba;
 
+/**
+ *
+ * @author nou model
+ *
+ */
 public class Song extends Product {
+	/**
+	 *
+	 */
 	private String name, artist;
 
-	public Song(String name, String artist, double price) {
+	/**
+	 *
+	 * @param nameA name song
+	 * @param artistA artist of song
+	 * @param price price of song
+	 */
+	public Song(final String nameA,
+			final String artistA, final double price) {
 		super(price);
-		this.name = name;
-		this.artist = artist;
+		this.name = nameA;
+		this.artist = artistA;
 	}
 
-	public String getName() {
+	/**
+	 *
+	 * @return name
+	 */
+	public final String getName() {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	/**
+	 *
+	 * @param nameS name of song
+	 */
+	public final void setName(final String nameS) {
+		this.name = nameS;
 	}
 
-	public String getArtist() {
+	/**
+	 *
+	 * @return artist
+	 */
+	public final String getArtist() {
 		return artist;
 	}
 
-	public void setArtist(String artist) {
-		this.artist = artist;
+	/**
+	 *
+	 * @param artistS artist
+	 */
+	public final void setArtist(final String artistS) {
+		this.artist = artistS;
 	}
 
-	public boolean equals(Song s) {
-		if (s.getName().equals(this.name) && s.getArtist().equals(this.artist) && s.getPrice() == this.price) {
+	/**
+	 *
+	 * @param s song
+	 * @return boolean
+	 */
+	public final boolean equals(final Song s) {
+		if (s.getName().equals(this.name)
+				&& s.getArtist().equals(this.artist)
+				&& s.getPrice() == this.price) {
 			return true;
 		}
 		return false;

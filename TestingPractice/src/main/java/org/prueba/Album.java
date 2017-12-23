@@ -2,62 +2,130 @@ package org.prueba;
 
 import java.util.ArrayList;
 
+/**
+ *
+ * @author nou model
+ *
+ */
+
 public class Album extends Product {
-	private String name, released_date, artist;
+	/**
+	 *
+	 */
+	private String name, releasedDate, artist;
+	/**
+	 *
+	 */
 	private ArrayList<Song> songs = new ArrayList<Song>();
 
-	public Album(String name, String released_date, String artist, int price) {
+	/**
+	 *
+	 * @param nameAl name album
+	 * @param releasedDateAl released date of album
+	 * @param artistAl artist of the album
+	 * @param price price of the album
+	 */
+	public Album(final String nameAl, final String releasedDateAl,
+			final String artistAl, final int price) {
 		super(price);
-		this.name = name;
-		this.released_date = released_date;
-		this.artist = artist;
+		this.name = nameAl;
+		this.releasedDate = releasedDateAl;
+		this.artist = artistAl;
 	}
 
-
-	public String getName() {
+	/**
+	 *
+	 * @return name
+	 */
+	public final String getName() {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	/**
+	 *
+	 * @param nameAl name of the album
+	 */
+	public final void setName(final String nameAl) {
+		this.name = nameAl;
 	}
 
-	public String getReleased_date() {
-		return released_date;
+	/**
+	 *
+	 * @return releasedDate
+	 */
+
+	public final String getreleasedDate() {
+		return releasedDate;
 	}
 
-	public void setReleased_date(String released_date) {
-		this.released_date = released_date;
+	/**
+	 *
+	 * @param releasedDateAl released date of the album
+	 */
+
+	public final void setreleasedDate(final String releasedDateAl) {
+		this.releasedDate = releasedDateAl;
 	}
 
-	public String getArtist() {
+	/**
+	 *
+	 * @return artist
+	 */
+	public final String getArtist() {
 		return artist;
 	}
 
-	public void setArtist(String artist) {
-		this.artist = artist;
+	/**
+	 *
+	 * @param artistAl artist of the album
+	 */
+	public final void setArtist(final String artistAl) {
+		this.artist = artistAl;
 	}
 
-	public ArrayList<Song> getSongs() {
+	/**
+	 *
+	 * @return songs
+	 */
+	public final ArrayList<Song> getSongs() {
 		return songs;
 	}
 
-	public void setSongs(ArrayList<Song> songs) {
-		this.songs = songs;
+	/**
+	 *
+	 * @param songsAl songs of the album
+	 */
+	public final void setSongs(final ArrayList<Song> songsAl) {
+		this.songs = songsAl;
 	}
 
-	public int getNSongs() {
-		return getSongs().size();
+	/**
+	 *
+	 * @return nsongs
+	 */
+	public final int getNSongs() {
+		int n = getSongs().size();
+		return n;
 	}
 
-	public boolean equals(Album al) {
-		if (al.getName().equals(this.name) && al.getReleased_date().equals(this.released_date)
-				&& al.getArtist().equals(this.artist) && al.getPrice() == this.price) {
+	/**
+	 *
+	 * @param al album to compare
+	 * @return boolean
+	 */
+	public final boolean equals(final Album al) {
+		String rl  = al.getreleasedDate();
+		if (al.getName().equals(this.name)
+				&& rl.equals(this.releasedDate)
+				&& al.getArtist().equals(this.artist)
+				&& al.getPrice() == this.price) {
 			if (songs.size() == 0) {
 				return true;
 			} else {
-				for (int i = 0; i < songs.size(); i++) {
-					if (al.getSongs().get(i).equals(this.songs.get(i))) {
+				int size = songs.size();
+				for (int i = 0; i < size; i++) {
+					Song s = al.getSongs().get(i);
+					if (s.equals(this.songs.get(i))) {
 						return true;
 					}
 				}

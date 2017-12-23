@@ -1,17 +1,37 @@
 package org.prueba;
 
+/**
+ *
+ * @author nou model
+ *
+ */
 public class Product {
+	/**
+	 *
+	 */
 	protected double price;
-	
-	public Product (double price) {
-		this.price = price;
+
+	/**
+	 *
+	 * @param priceP of the product
+	 */
+	public Product(final double priceP) {
+		this.price = priceP;
 	}
 
-	public double getPrice() {
+	/**
+	 *
+	 * @return price
+	 */
+	public final double getPrice() {
 		return price;
 	}
 
-	public void setPrice(double price) {
-		this.price = price;
+	/**
+	 *
+	 * @param priceP price of the product
+	 */
+	public final void setPrice(final double priceP) {
+		this.price = priceP;
 	}
 }

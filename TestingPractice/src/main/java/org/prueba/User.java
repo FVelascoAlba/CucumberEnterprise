@@ -1,91 +1,198 @@
 package org.prueba;
 import java.util.ArrayList;
 
+/**
+ *
+ * @author nou model
+ *
+ */
 public class User {
+	/**
+	 *
+	 */
 	private String name, surname;
+	/**
+	 *
+	 */
 	protected String userName;
+	/**
+	 *
+	 */
 	protected String password;
-	private ArrayList<Song> songs_bought = new ArrayList<Song>();
-	private ArrayList<Album> albums_bought = new ArrayList<Album>();
+	/**
+	 *
+	 */
+	private ArrayList<Song> songsBought = new ArrayList<Song>();
+	/**
+	 *
+	 */
+	private ArrayList<Album> AlbumsBought = new ArrayList<Album>();
+	/**
+	 *
+	 */
 	private int money;
-	private ArrayList<ArrayList<Song>> list_songs;
-	
-	public User() {}
-	
-	public User(String userName, String password) {
+	/**
+	 *
+	 */
+	private ArrayList<ArrayList<Song>> lists;
+
+	/**
+	 *
+	 */
+	public User() { }
+
+	/**
+	 *
+	 * @param userNameU user name
+	 * @param passwordU password
+	 */
+	public User(final String userNameU, final String passwordU) {
 		super();
-		this.userName = userName;
-		this.password = password;
+		this.userName = userNameU;
+		this.password = passwordU;
 	}
-	
-	public void setMoney(int m) {
+
+	/**
+	 *
+	 * @param m money
+	 */
+	public final void setMoney(final int m) {
 		this.money = m;
 	}
-	
-	public int getMoney() {
+	/**
+	 *
+	 * @return money
+	 */
+	public final int getMoney() {
 		return this.money;
 	}
-	
-	public String getName() {
+	/**
+	 *
+	 * @return name
+	 */
+	public final String getName() {
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
+	/**
+	 *
+	 * @param n name
+	 */
+	public final void setName(final String n) {
+		this.name = n;
 	}
-	public String getSurname() {
+	/**
+	 *
+	 * @return surname
+	 */
+	public final String getSurname() {
 		return surname;
 	}
-	public void setSurname(String surname) {
-		this.surname = surname;
+	/**
+	 *
+	 * @param s surname
+	 */
+	public final void setSurname(final String s) {
+		this.surname = s;
 	}
-	public String getUserName() {
+	/**
+	 *
+	 * @return username
+	 */
+	public final String getUserName() {
 		return userName;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	/**
+	 *
+	 * @param userNameU user name
+	 */
+	public final void setUserName(final String userNameU) {
+		this.userName = userNameU;
 	}
-	public String getPassword() {
+	/**
+	 *
+	 * @return password
+	 */
+	public final String getPassword() {
 		return password;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	/**
+	 *
+	 * @param passwordU password
+	 */
+	public final void setPassword(final String passwordU) {
+		this.password = passwordU;
 	}
-	public ArrayList<Song> getSongs_bought() {
-		return songs_bought;
+	/**
+	 *
+	 * @return songsBought
+	 */
+	public final ArrayList<Song> getsongsBought() {
+		return songsBought;
 	}
-	public void setSongs_bought(ArrayList<Song> songs_bought) {
-		this.songs_bought = songs_bought;
+	/**
+	 *
+	 * @param sb songs bought
+	 */
+	public final void setsongsBought(final ArrayList<Song> sb) {
+		this.songsBought = sb;
 	}
-	public ArrayList<Album> getAlbums_bought() {
-		return albums_bought;
+	/**
+	 *
+	 * @return albums bought
+	 */
+	public final ArrayList<Album> getAlbumBought() {
+		return AlbumsBought;
 	}
-	public void setAlbums_bought(Album a) {
-		this.albums_bought.add(a);
+	/**
+	 *
+	 * @param a album
+	 */
+	public final void setAlbumBought(final Album a) {
+		this.AlbumsBought.add(a);
 	}
-	public ArrayList<ArrayList<Song>> getList_songs() {
-		return list_songs;
+	/**
+	 *
+	 * @return list songs
+	 */
+	public final ArrayList<ArrayList<Song>> getls() {
+		return lists;
 	}
-	public void setList_songs(ArrayList<ArrayList<Song>> list_songs) {
-		this.list_songs = list_songs;
+	/**
+	 *
+	 * @param ls list songs
+	 */
+	public final void setls(final ArrayList<ArrayList<Song>> ls) {
+		this.lists = ls;
 	}
-	
-	public boolean equals (User us) {
-		if(us.getUserName().equals(this.userName) && us.getPassword().equals(this.password)) {
+	/**
+	 *
+	 * @param us user
+	 * @return boolean
+	 */
+	public final boolean equals(final User us) {
+		if (us.getUserName().equals(this.userName)
+				&& us.getPassword().equals(this.password)) {
 			return true;
 		}
 		return false;
 	}
-	
-	
-	public boolean checkID (int id) throws Exception {
-		ArrayList<ListSongs> ls = BrokerDB.getAgente().getListSongs();
-		
-		for (int i=0; i<ls.size(); i++) {
+
+	/**
+	 *
+	 * @param id id list of songs
+	 * @return boolean
+	 * @throws Exception throws exception
+	 */
+	public final boolean checkID(final int id) throws Exception {
+		ArrayList<ListSongs> ls =
+				BrokerDB.getAgente().getListSongs();
+
+		for (int i = 0; i < ls.size(); i++) {
 			if (ls.get(i).getId() == id) {
 				return true;
 			}
 		}
-		
+
 		return false;
 	}
 

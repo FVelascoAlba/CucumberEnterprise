@@ -31,7 +31,7 @@ public class TestAddSongToList
 
     /**
      * Rigourous Test :-)
-     * @throws Exception 
+     *
      */
     
     public void test1 () throws Exception {

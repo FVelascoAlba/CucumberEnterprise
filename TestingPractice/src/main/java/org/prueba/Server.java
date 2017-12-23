@@ -2,78 +2,130 @@ package org.prueba;
 
 import java.util.ArrayList;
 
-import org.prueba.PurchaseInterface;
-
+/**
+ *
+ * @author nou model
+ *
+ */
 public class Server {
 
+	/**
+	 *
+	 */
 	public Server() {
 
 	}
 
-	public void addSong() {
+	/**
+	 *
+	 */
+	public final void addSong() {
 	}
 
-	public void addAlbum() {
+	/**
+	 *
+	 */
+	public final void addAlbum() {
 	}
 
-	public void modifySong(Song s) {
+	/**
+	 *
+	 * @param s song
+	 */
+	public final void modifySong(final Song s) {
 	}
 
-	public void deleteSong(Song s) {
+	/**
+	 *
+	 * @param s song
+	 */
+	public final void deleteSong(final Song s) {
 	}
 
-	public void deleteAlbum(Album a) {
+	/**
+	 *
+	 * @param a
+	 */
+	public final void deleteAlbum(final Album a) {
 	}
 
-	public Song searchSong() {
+	/**
+	 *
+	 * @return song
+	 */
+	public final Song searchSong() {
 		return null;
 	}
 
-	public void createUserManually() {
+	/**
+	 *
+	 */
+	public final void createUserManually() {
 	}
 
-	public void createUserAutomatically() {
+	/**
+	 *
+	 */
+	public final void createUserAutomatically() {
 	}
 
-	public void deleteUser(User u) {
+	/**
+	 *
+	 * @param u user
+	 */
+	public final void deleteUser(final User u) {
 	}
 
-	public static boolean sendMessage(Administrator ad, Email em, Regular re) throws Exception {
+	/**
+	 *
+	 * @param ad administrator
+	 * @param em email
+	 * @param re regular user
+	 * @return boolean
+	 * @throws Exception throws exception
+	 */
+	public final static boolean sendMessage(final Administrator ad,
+			final Email em, final Regular re)
+					throws Exception {
 
-		if (ad != null) {
-			if (re != null) {
-				if (em != null) {
-					if (ad.exists()) {
-						if (re.exists()) {
-							return true;
-						}
-					}
-				}
-
-			}
+		if (ad != null && re != null
+				&& em != null && ad.exists()
+				&& re.exists()) {
+			return true;
 		}
-		
+
 		return false;
+
 	}
 
-	public boolean purchaseAlbum(Album al, User u) throws Exception {
+	/**
+	 *
+	 * @param al album
+	 * @param u user
+	 * @return boolean
+	 * @throws Exception throws exception
+	 */
+	public final boolean purchaseAlbum(final Album al,
+			final User u) throws Exception {
 
 		boolean response = false;
-		if (al != null) {
-			if (u != null) {
-				if (albumExists(al)) {
-					if (payProduct(al, u)) {
-						u.setAlbums_bought(al);
-						response = true;
-					}
-				}
-			}
-
+		if (al != null && u != null
+				&& albumExists(al) && payProduct(al, u)) {
+			u.setAlbumBought(al);
+			response = true;
 		}
+
 		return response;
 	}
 
-	public boolean albumExists(Album al) throws Exception {
+	/**
+	 *
+	 * @param al album
+	 * @return boolean
+	 * @throws Exception throws exception
+	 */
+	public final boolean albumExists(final Album al)
+			throws Exception {
 
 		ArrayList<Album> albums = BrokerDB.getAgente().getAlbums();
 		for (int i = 0; i < albums.size(); i++) {
@@ -85,7 +137,14 @@ public class Server {
 		return false;
 	}
 
-	public boolean payProduct(Album al, User u) {
+	/**
+	 *
+	 * @param al album
+	 * @param u user
+	 * @return boolean
+	 */
+	public final boolean payProduct(final Album al,
+			final User u) {
 		int money = u.getMoney();
 
 		if (money >= al.getPrice()) {

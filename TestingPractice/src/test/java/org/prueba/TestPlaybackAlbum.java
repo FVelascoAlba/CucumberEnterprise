@@ -31,7 +31,6 @@ public class TestPlaybackAlbum extends TestCase {
 
     /**
      * Rigourous Test :-)
-     * @throws Exception 
      *
      */
     

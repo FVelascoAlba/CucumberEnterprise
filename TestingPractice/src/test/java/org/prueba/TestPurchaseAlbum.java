@@ -25,7 +25,6 @@ public class TestPurchaseAlbum extends TestCase {
 
 	/**
 	 * Rigourous Test :-)
-	 * @throws Exception 
 	 */
 
 	public void test1() throws Exception {

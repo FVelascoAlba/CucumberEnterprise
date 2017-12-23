@@ -28,7 +28,6 @@ public class TestSendMessage extends TestCase {
 	/**
 	 * Rigourous Test :-)
 	 * 
-	 * @throws Exception
 	 */
 	
 

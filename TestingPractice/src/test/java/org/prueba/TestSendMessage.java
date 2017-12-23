@@ -30,6 +30,7 @@ public class TestSendMessage extends TestCase {
 	 * 
 	 * @throws Exception
 	 */
+	
 
 	public void test1() throws Exception {
 
@@ -54,7 +55,7 @@ public class TestSendMessage extends TestCase {
 		assertFalse(Server.sendMessage(ad, em, re));
 
 	}
-	
+
 	public void test3() throws Exception {
 
 		Administrator ad = new Administrator("FernandoV10", "asdf10");
@@ -64,7 +65,7 @@ public class TestSendMessage extends TestCase {
 		assertFalse(Server.sendMessage(ad, em, re));
 
 	}
-	
+
 	public void test4() throws Exception {
 
 		Administrator ad = new Administrator("PepeMola", "asdf1234");

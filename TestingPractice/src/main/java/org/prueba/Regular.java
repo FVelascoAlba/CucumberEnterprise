@@ -13,7 +13,6 @@ public class Regular extends User {
 		
 		for(int i=0; i<regUsers.size(); i++) {
 			if(regUsers.get(i).getUserName().equals(this.userName) && regUsers.get(i).getPassword().equals(this.password)) {
-				System.out.println(regUsers.get(i).getUserName());
 				return true;
 			}
 		}

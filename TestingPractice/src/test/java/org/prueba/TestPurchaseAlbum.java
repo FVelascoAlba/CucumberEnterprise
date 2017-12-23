@@ -32,7 +32,7 @@ public class TestPurchaseAlbum extends TestCase {
 
 		Server s = new Server();
 		Album al = new Album("War", "28/2/1983", "U2", 17);
-		User us = new User("FernandoV10", "as123gh");
+		User us = new User("FernandoV10", "asdf10");
 		us.setMoney(20);
 
 		assertTrue(s.purchaseAlbum(al, us));

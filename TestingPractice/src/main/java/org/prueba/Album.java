@@ -133,4 +133,20 @@ public class Album extends Product {
 		}
 		return false;
 	}
+
+	/**
+	 * @param o an instance of an object
+	 * @return boolean
+	 */
+	public final boolean equals(Object o) {
+		return super.equals(o);
+	}
+
+	/**
+	 * @return the hashCode of the object
+	 */
+	public final int hashCode() {
+		assert false : "hashCode not designed";
+	return 42; // any arbitrary constant will do
+	}
 }

@@ -57,9 +57,7 @@ public class BrokerDB {
 				"David Bowie", d);
 
 		Song s = new Song("ArtPop", "Lady Gaga", 3);
-		ArrayList<Song> songsalbum = new ArrayList<Song>();
 		songs.add(s);
-		songsalbum.add(s);
 		al.setSongs(songs);
 		albums.add(al);
 		albums.add(al1);
